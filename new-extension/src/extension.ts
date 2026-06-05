@@ -7,4 +7,9 @@ export function activate(activation: ActivationContext) {
   console.log(
     `Hello from new-extension! Your Live Set's tempo is: ${tempo} bpm.`,
   );
+
+  context.application.song.tempo = 165;
+  console.log(
+    `Hello from new-extension! Your Live Set's tempo is reset to: ${context.application.song.tempo} bpm.`,
+  );
 }
